@@ -1,27 +1,27 @@
 package guitar_order_system;
 
 public class Product implements Stock {
-    private int currentStock;
+    private int stock;
     private int leadTime;
     private int outstandingOrders;
     private AverageDailySales averageDailySales;
-    private int productID;
+    private int id;
 
-    public Product(int productID, int currentStock, int leadTime, int outstandingOrders, AverageDailySales averageDailySales) {
-        this.productID = productID;
-        this.currentStock = currentStock;
+    public Product(int id, int stock, int leadTime, int outstandingOrders, AverageDailySales averageDailySales) {
+        this.id = id;
+        this.stock = stock;
         this.leadTime = leadTime;
         this.outstandingOrders = outstandingOrders;
         this.averageDailySales = averageDailySales;
     }
 
     public int getId() {
-        return productID;
+        return id;
     }
 
     @Override
     public boolean needsRestocking() {
-        return currentStock < restockThreshold();
+        return stock < restockThreshold();
     }
 
     int restockThreshold() {
