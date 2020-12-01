@@ -1,19 +1,23 @@
 package guitar_order_system;
 
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class RestockTracker {
     private RestockCalculator restockCalculator;
-    private List<Stock> stockList;
+    private Set<Integer> soldProductIds;
+    private Warehouse warehouse;
 
-    public RestockTracker(RestockCalculator restockCalculator, List<Stock> stockList) {
+    public RestockTracker(RestockCalculator restockCalculator, Set<Integer> soldProductIds, Warehouse warehouse) {
         this.restockCalculator = restockCalculator;
-        this.stockList = stockList;
+        this.soldProductIds = soldProductIds;
+        this.warehouse = warehouse;
     }
 
     public List<RestockItem> restockList() {
-        return stockList.stream()
+        return soldProductIds.stream()
+                .map((id) -> warehouse.productById(id))
                 .filter(Stock::needsRestocking)
                 .map((product) -> new RestockItem(product, restockCalculator.getRestockAmount(product)))
                 .collect(Collectors.toList());
