@@ -10,7 +10,7 @@ public class ProductSalesRate implements AverageDailySales {
     }
 
     @Override
-    public double getAverageSales(Product product) {
+    public double averageSales(Product product) {
         int monthSales = sales.total(product.getId(), dateRange.startDate(0), dateRange.endDate(0));
 
         if (monthSales == 0) {

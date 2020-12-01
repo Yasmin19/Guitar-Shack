@@ -1,16 +1,16 @@
 package guitar_order_system;
 
 public class RestockItem {
-    private int productId;
+    private Stock product;
     private int restockAmount;
 
-    public RestockItem(int productId, int restockAmount) {
-        this.productId = productId;
+    public RestockItem(Stock product, int restockAmount) {
+        this.product = product;
         this.restockAmount = restockAmount;
     }
 
-    public int getProductId() {
-        return productId;
+    public Stock getProduct() {
+        return product;
     }
 
     public int getRestockAmount() {

@@ -5,17 +5,17 @@ import java.util.stream.Collectors;
 
 public class RestockTracker {
     private RestockCalculator restockCalculator;
-    private List<Product> productList;
+    private List<Stock> stockList;
 
-    public RestockTracker(RestockCalculator restockCalculator, List<Product> productList) {
+    public RestockTracker(RestockCalculator restockCalculator, List<Stock> stockList) {
         this.restockCalculator = restockCalculator;
-        this.productList = productList;
+        this.stockList = stockList;
     }
 
-    public List<RestockItem> getRestockList() {
-        return productList.stream()
-                .filter(Product::needsRestocking)
-                .map((product) -> new RestockItem(product.getId(), restockCalculator.getRestockAmount(product)))
+    public List<RestockItem> restockList() {
+        return stockList.stream()
+                .filter(Stock::needsRestocking)
+                .map((product) -> new RestockItem(product, restockCalculator.getRestockAmount(product)))
                 .collect(Collectors.toList());
     }
 

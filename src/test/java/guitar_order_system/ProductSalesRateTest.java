@@ -21,7 +21,7 @@ public class ProductSalesRateTest {
         };
         Date todaysDate = new Date(2020,9,20);
         AverageDailySales averageDailySales = new ProductSalesRate(sales,  new DateRange(todaysDate));
-        assertEquals(0.33, averageDailySales.getAverageSales(new Product(811, 10,10,10, averageDailySales)),0.01);
+        assertEquals(0.33, averageDailySales.averageSales(new Product(811, 10,10,10, averageDailySales)),0.01);
     }
 
     @Test
@@ -30,7 +30,7 @@ public class ProductSalesRateTest {
         Date todaysDate = new Date(2020,9,20);
         AverageDailySales averageDailySales = new ProductSalesRate(sales,  new DateRange(todaysDate));
 
-        averageDailySales.getAverageSales(new Product(811, 10, 10, 10, averageDailySales));
+        averageDailySales.averageSales(new Product(811, 10, 10, 10, averageDailySales));
         verify(sales).total(811, new Date(2020,8,20), new Date(2020, 9, 20));
     }
 
@@ -52,7 +52,7 @@ public class ProductSalesRateTest {
         Date todaysDate = new Date(2020,9,20);
         AverageDailySales averageDailySales = new ProductSalesRate(sales, new DateRange(todaysDate));
 
-        averageDailySales.getAverageSales(new Product(811,10,10,10, averageDailySales));
+        averageDailySales.averageSales(new Product(811,10,10,10, averageDailySales));
         verify(sales, atLeastOnce()).total(811, new Date(2019,8,20), new Date(2019,9,20));
     }
 }

@@ -1,6 +1,6 @@
 package guitar_order_system;
 
-public class Product {
+public class Product implements Stock {
     private int currentStock;
     private int leadTime;
     private int outstandingOrders;
@@ -19,11 +19,12 @@ public class Product {
         return productID;
     }
 
-    boolean needsRestocking() {
+    @Override
+    public boolean needsRestocking() {
         return currentStock < restockThreshold();
     }
 
     int restockThreshold() {
-        return (int) Math.ceil(leadTime * averageDailySales.getAverageSales(this) - (double) outstandingOrders);
+        return (int) Math.ceil(leadTime * averageDailySales.averageSales(this) - (double) outstandingOrders);
     }
 }
