@@ -4,14 +4,4 @@ orbs:
 workflows:
   maven_test:
     jobs:
-      - build
       - maven/test # checkout, build, test, and upload test results
-jobs:
-  build:
-    docker:
-      - image: circleci/openjdk:12
-        auth:
-          username: mydockerhub-user
-          password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
-    steps:
-      - checkout
