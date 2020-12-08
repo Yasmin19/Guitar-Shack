@@ -10,5 +10,7 @@ jobs:
         auth:
           username: mydockerhub-user
           password: $DOCKERHUB_PASSWORD
-    steps:
-      - maven/test # checkout, build, test, and upload test results
+
+workflow:
+  jobs:
+    - maven/test # checkout, build, test, and upload test results
