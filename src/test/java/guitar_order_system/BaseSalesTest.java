@@ -22,10 +22,5 @@ public abstract class BaseSalesTest {
         assertThat(totalSales, greaterThan(0));
     }
 
-    @Test
-    public void brokenTest() {
-        fail();
-    }
-
     protected abstract SalesData createSalesData();
 }
