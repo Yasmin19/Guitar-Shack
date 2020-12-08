@@ -9,7 +9,7 @@ workflows:
 jobs:
   build:
     docker:
-      - image: circleci/openjdk:stretch
+      - image: circleci/openjdk:12
         auth:
           username: mydockerhub-user
           password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
