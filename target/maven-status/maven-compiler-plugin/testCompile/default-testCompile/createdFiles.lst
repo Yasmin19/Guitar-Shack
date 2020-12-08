@@ -1,8 +1,8 @@
 guitar_order_system/ProductSalesRateTest$2.class
-guitar_order_system/RestockListTest.class
-guitar_order_system/ProductSalesRateTest.class
 guitar_order_system/BaseSalesTest.class
 guitar_order_system/SalesUnitTest.class
 contract_tests/SalesTest.class
+guitar_order_system/RestockListTest.class
+guitar_order_system/ProductSalesRateTest.class
 guitar_order_system/RestockThresholdTest.class
 guitar_order_system/ProductSalesRateTest$1.class
