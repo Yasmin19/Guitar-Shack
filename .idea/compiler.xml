@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Guitar_Order_System" target="1.13" />
+      <module name="Guitar_Order_System" target="13" />
     </bytecodeTargetLevel>
   </component>
 </project>
