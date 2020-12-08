@@ -5,6 +5,7 @@ import org.junit.Test;
 import java.util.Calendar;
 import java.util.Date;
 
+import static junit.framework.TestCase.fail;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.greaterThan;
 
@@ -19,6 +20,11 @@ public abstract class BaseSalesTest {
         Date endDate = calendar.getTime();
         Integer totalSales = sales.total(811, startDate, endDate);
         assertThat(totalSales, greaterThan(0));
+    }
+
+    @Test
+    public void brokenTest() {
+        fail();
     }
 
     protected abstract SalesData createSalesData();
