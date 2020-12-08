@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="3" failures="0" name="guitar_order_system.ProductSalesRateTest" time="0.203" errors="0" skipped="0">
+<testsuite tests="3" failures="0" name="guitar_order_system.ProductSalesRateTest" time="0.213" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="12+33"/>
@@ -61,6 +61,6 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
   </properties>
   <testcase classname="guitar_order_system.ProductSalesRateTest" name="correctStartAndEndDatesForAtLeastOneSaleInLastMonth" time="0.196"/>
-  <testcase classname="guitar_order_system.ProductSalesRateTest" name="atLeastOneSaleInLastMonth" time="0"/>
-  <testcase classname="guitar_order_system.ProductSalesRateTest" name="correctStartAndEndDatesForHistoricSales" time="0.007"/>
+  <testcase classname="guitar_order_system.ProductSalesRateTest" name="atLeastOneSaleInLastMonth" time="0.002"/>
+  <testcase classname="guitar_order_system.ProductSalesRateTest" name="correctStartAndEndDatesForHistoricSales" time="0.015"/>
 </testsuite>
