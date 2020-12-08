@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="3" failures="0" name="guitar_order_system.ProductSalesRateTest" time="0.226" errors="0" skipped="0">
+<testsuite tests="3" failures="0" name="guitar_order_system.ProductSalesRateTest" time="0.14" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="12+33"/>
@@ -60,7 +60,7 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
   </properties>
-  <testcase classname="guitar_order_system.ProductSalesRateTest" name="correctStartAndEndDatesForAtLeastOneSaleInLastMonth" time="0.214"/>
-  <testcase classname="guitar_order_system.ProductSalesRateTest" name="atLeastOneSaleInLastMonth" time="0.002"/>
-  <testcase classname="guitar_order_system.ProductSalesRateTest" name="correctStartAndEndDatesForHistoricSales" time="0.01"/>
+  <testcase classname="guitar_order_system.ProductSalesRateTest" name="correctStartAndEndDatesForAtLeastOneSaleInLastMonth" time="0.133"/>
+  <testcase classname="guitar_order_system.ProductSalesRateTest" name="atLeastOneSaleInLastMonth" time="0.001"/>
+  <testcase classname="guitar_order_system.ProductSalesRateTest" name="correctStartAndEndDatesForHistoricSales" time="0.006"/>
 </testsuite>
